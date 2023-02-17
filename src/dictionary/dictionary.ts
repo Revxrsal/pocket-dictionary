@@ -5,8 +5,8 @@ import {invoke} from "@tauri-apps/api/tauri";
  *
  * @param entry Entry to lookup
  */
-export async function getHTML(entry: string): Promise<string> {
-    return invoke("get_html", {entry})
+export async function lookupEntry(entry: string): Promise<string> {
+    return invoke("lookup_entry", {entry})
 }
 
 /**
