@@ -1,8 +1,6 @@
-# Svelte-Kit + Vite
+# Pocket Dictionary
+A personal, offline English dictionary app written in Svelte and Tauri.
+Not intended for public use.
 
-This template should help get you started developing with Tauri and Svelte-Kit in Vite.
-
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
-
+## Attributes
+<a href="https://www.flaticon.com/free-icons/dictionary" title="dictionary icons">Dictionary icons created by Freepik - Flaticon</a>

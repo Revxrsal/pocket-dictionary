@@ -7,12 +7,15 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "dictionary",
-    "version": "0.0.0"
+    "productName": "Pocket Dictionary",
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
       "all": false,
+      "fs": {
+        "scope": ["$RESOURCE/*"]
+      },
       "shell": {
         "all": false,
         "open": true
@@ -33,7 +36,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "io.revxrsal",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -42,7 +45,9 @@
         "providerShortName": null,
         "signingIdentity": null
       },
-      "resources": [],
+      "resources": [
+        "dictionary/*"
+      ],
       "shortDescription": "",
       "targets": "all",
       "windows": {
@@ -62,7 +67,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "dictionary",
+        "title": "Pocket Dictionary",
         "width": 800
       }
     ]

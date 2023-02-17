@@ -1,0 +1,10 @@
+.vi-before {
+    opacity: 0.5;
+    margin-inline: 0.5rem;
+}
+
+.vi {
+    opacity: 0.7;
+    font-style: italic;
+    margin: 0.4rem;
+}
