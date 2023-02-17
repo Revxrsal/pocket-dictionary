@@ -5,6 +5,7 @@
 <style>
 	div {
 		margin-top: 1.25em;
+		margin-bottom: 1.25em;
 	}
 </style>
 
