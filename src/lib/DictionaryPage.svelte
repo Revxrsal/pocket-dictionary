@@ -78,7 +78,7 @@
 			bind:this={searchButton}
 			disabled={query === ""}
 			class="search_button"
-			on:click={async () => result = await lookup(query, word => query = word)}
+			on:click={async () => lookup(query, word => query = word).then(res => result = res)}
 	>Search
 	</button>
 </div>
