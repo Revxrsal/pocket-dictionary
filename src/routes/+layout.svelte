@@ -7,14 +7,12 @@
 	import {page} from "$app/stores";
 	import Home from "$lib/icons/Home.svelte";
 	import {colorScheme} from "../preferences/theme.ts";
-	import {crossfade} from '../preferences/crossfade.ts'
-	const [send, receive] = crossfade
 
 </script>
 
 <title>Pocket Dictionary</title>
 
-<main out:send="{{key: 'a'}}" in:receive="{{key: 'a'}}" class="container" color-scheme={$colorScheme}>
+<main class="container" color-scheme={$colorScheme}>
 	<nav>
 		<ul>
 		</ul>
