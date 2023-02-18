@@ -1,5 +1,3 @@
-
-
 use crate::database::Database;
 
 fn remove_suffix(string: &mut String, suffix: &'static str) {
@@ -9,7 +7,6 @@ fn remove_suffix(string: &mut String, suffix: &'static str) {
 }
 
 pub fn lookup(mut entry: String, database: &mut Database) -> Option<String> {
-
     let result = database.lookup(&entry);
     if result.is_some() { return result; }
 
@@ -45,11 +42,13 @@ pub fn lookup(mut entry: String, database: &mut Database) -> Option<String> {
     let result = database.lookup(&entry);
     if result.is_some() { return result; }
 
+    if entry.is_empty() { return None; }
+
     let result = database.lookup(&format!("{}e", entry));
     if result.is_some() { return result; }
 
     entry.remove(entry.len() - 1);
-    let result = database.lookup(&format!("{}e", entry));
+    let result = database.lookup(&entry);
     if result.is_some() { return result; }
 
     None
