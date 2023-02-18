@@ -1,0 +1,23 @@
+@import "deep-orange.css";
+@import "deep-purple.css";
+@import "indigo.css";
+@import "pink.css";
+@import "red.css";
+@import "teal.css";
+@import "purple.css";
+@import "blue.css";
+@import "light-blue.css";
+@import "cyan.css";
+@import "green.css";
+@import "light-green.css";
+@import "lime.css";
+@import "yellow.css";
+@import "amber.css";
+@import "orange.css";
+@import "green.css";
+@import "grey.css";
+@import "blue-grey.css";
+
+svg {
+    stroke: var(--primary);
+}

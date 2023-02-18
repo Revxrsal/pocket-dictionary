@@ -1,0 +1,41 @@
+/* Deep-orange Light scheme (Default) */
+/* Can be forced with data-theme.ts="light" */
+[data-theme="light"],
+[color-scheme="deep-orange"],
+:root:not([data-theme="dark"]) {
+    --primary: #f4511e;
+    --primary-hover: #e64a19;
+    --primary-focus: rgba(244, 81, 30, 0.125);
+    --primary-inverse: #FFF;
+}
+
+/* Deep-orange Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+[color-scheme="deep-orange"]
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --primary: #f4511e;
+        --primary-hover: #ff5722;
+        --primary-focus: rgba(244, 81, 30, 0.25);
+        --primary-inverse: #FFF;
+    }
+}
+
+/* Deep-orange Dark scheme (Forced) */
+/* Enabled if forced with data-theme.ts="dark" */
+[color-scheme="deep-orange"],
+[data-theme="dark"] {
+    --primary: #f4511e;
+    --primary-hover: #ff5722;
+    --primary-focus: rgba(244, 81, 30, 0.25);
+    --primary-inverse: #FFF;
+}
+
+/* Deep-orange (Common styles) */
+[color-scheme="deep-orange"],
+:root {
+    --form-element-active-border-color: var(--primary);
+    --form-element-focus-color: var(--primary-focus);
+    --switch-color: var(--primary-inverse);
+    --switch-checked-background-color: var(--primary);
+}
