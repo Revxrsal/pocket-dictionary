@@ -1,9 +1,9 @@
 <script>
 	import {getClipboard} from "../dictionary/dictionary.ts";
-	import Meaning from "$lib/Definition.svelte";
 	import {onDestroy, onMount} from "svelte";
 	import {getEntryFromURL, lookup} from "../dictionary/sanitizer.ts";
 	import {page} from "$app/stores";
+	import Definition from "$lib/Definition.svelte";
 	
 	export let query;
 	export let clickSearch = "";
@@ -69,7 +69,8 @@
 	<input
 			class="input_area"
 			placeholder="Word here..."
-			type="text"
+			role="searchbox"
+			type="search"
 			bind:value={query}
 			on:keyup={event => {
 				if (event.key === "Enter") searchButton.click();
@@ -83,4 +84,4 @@
 	</button>
 </div>
 
-<Meaning bind:result/>
+<Definition bind:result/>
