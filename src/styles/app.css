@@ -9,3 +9,6 @@ h1 {
     margin-top: 1.25em;
 }
 
+html {
+    scroll-behavior: smooth;
+}
