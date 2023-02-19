@@ -27,5 +27,5 @@
 
 <div class="container">
 	<p>Color scheme</p>
-	<ColorPicker id="color_picker"/>
+	<ColorPicker/>
 </div>

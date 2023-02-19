@@ -7,7 +7,9 @@
 	import {page} from "$app/stores";
 	import Home from "$lib/icons/Home.svelte";
 	import {colorScheme} from "../preferences/theme.ts";
+	import PageTransition from "$lib/FadeIn.svelte";
 
+	export let data;
 </script>
 
 <title>Pocket Dictionary</title>
@@ -30,5 +32,7 @@
 			</li>
 		</ul>
 	</nav>
-	<slot />
+	<PageTransition path={data.pathname}>
+		<slot />
+	</PageTransition>
 </main>
