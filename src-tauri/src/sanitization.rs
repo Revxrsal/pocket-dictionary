@@ -22,6 +22,10 @@ pub fn lookup(mut entry: String, database: &mut Database) -> Option<String> {
     let result = database.lookup(&entry);
     if result.is_some() { return result; }
 
+    remove_suffix(&mut entry, "ness");
+    let result = database.lookup(&entry);
+    if result.is_some() { return result; }
+
     remove_suffix(&mut entry, "ed");
     let result = database.lookup(&entry);
     if result.is_some() { return result; }
