@@ -3,7 +3,7 @@
 	import {onDestroy, onMount} from "svelte";
 	import {getEntryFromURL, lookup} from "../dictionary/sanitizer.ts";
 	import {page} from "$app/stores";
-	import Definition from "$lib/Definition.svelte";
+	import {fade} from "svelte/transition";
 	
 	export let query;
 	export let clickSearch = "";
@@ -31,9 +31,14 @@
 	}
 	
 	/* Listen to clipboard changes */
-	$:{
+	$: {
 		if (clipboard)
 			lookup(clipboard, word => query = word).then(res => result = res)
+	}
+	
+	$: {
+		if (result)
+			window.scrollTo(0, 0)
 	}
 	
 	/* Listen to clipboard changes */
@@ -50,6 +55,11 @@
 <h1>Pocket Dictionary</h1>
 
 <style>
+	.meaning {
+		margin-top: 1.25em;
+		margin-bottom: 1.25em;
+	}
+	
 	.input_area {
 		width: 80%;
 		margin: 0 1rem;
@@ -84,4 +94,11 @@
 	</button>
 </div>
 
-<Definition bind:result/>
+
+{#if result !== ""}
+	{#key result}
+		<div class="meaning"  in:fade={{duration: 100}} out:fade={{duration: 125}}>
+			{@html result}
+		</div>
+	{/key}
+{/if}

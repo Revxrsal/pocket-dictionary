@@ -30,7 +30,7 @@ pub fn lookup(mut entry: String, database: &mut Database) -> Option<String> {
     let result = database.lookup(&entry);
     if result.is_some() { return result; }
 
-    remove_suffix(&mut entry, "ings");
+    remove_suffix(&mut entry, "s");
     let result = database.lookup(&entry);
     if result.is_some() { return result; }
 
@@ -42,16 +42,12 @@ pub fn lookup(mut entry: String, database: &mut Database) -> Option<String> {
     let result = database.lookup(&entry);
     if result.is_some() { return result; }
 
-    remove_suffix(&mut entry, "s");
-    let result = database.lookup(&entry);
-    if result.is_some() { return result; }
-
     if entry.is_empty() { return None; }
 
     let result = database.lookup(&format!("{}e", entry));
     if result.is_some() { return result; }
 
-    entry.remove(entry.len() - 1);
+    entry.pop();
     let result = database.lookup(&entry);
     if result.is_some() { return result; }
 

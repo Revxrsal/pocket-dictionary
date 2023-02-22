@@ -2,7 +2,7 @@
 	import {setColorScheme} from "../../preferences/theme.ts";
 	import {colorScheme} from "../../preferences/theme.ts";
 	import Tick from "$lib/icons/Tick.svelte";
-	import {fade, fly} from 'svelte/transition';
+	import {fade} from 'svelte/transition';
 	
 	export let scheme;
 	export let color;

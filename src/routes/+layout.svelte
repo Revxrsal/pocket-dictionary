@@ -7,7 +7,7 @@
 	import {page} from "$app/stores";
 	import Home from "$lib/icons/Home.svelte";
 	import {colorScheme} from "../preferences/theme.ts";
-	import PageTransition from "$lib/FadeIn.svelte";
+	import FadeIn from "$lib/transitions/FadeIn.svelte";
 
 	export let data;
 </script>
@@ -32,7 +32,7 @@
 			</li>
 		</ul>
 	</nav>
-	<PageTransition path={data.pathname}>
+	<FadeIn path={data.pathname}>
 		<slot />
-	</PageTransition>
+	</FadeIn>
 </main>
